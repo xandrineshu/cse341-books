@@ -1,3 +1,5 @@
+// Database connection setup for Issue 1
+
 import app from './app.js';
 import { connectToDb } from './src/db/connect.js';
 
