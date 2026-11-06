@@ -1,0 +1,41 @@
+# Week 01 Reflection
+
+1. Include a link to one of your Pull Requests (PRs) at GitHub. (It should be merged and closed at this point.)
+GitHub Pull Request Link: https://github.com/xandrineshu/cse341-books/pull/2
+
+
+2. Include a link to one of your Issues at GitHub. (It should be closed at this point.)
+GitHub Issue Link: https://github.com/xandrineshu/cse341-books/issues/1
+
+
+3. Which issue took more or less time than expected? Why?
+Answer: Issue 4 (Deploy and Test the Application) took a bit longer than expected because of configuring the MongoDB Atlas IP Access List for Render's outbound IP ranges. 
+        Once I learned how to whitelist those network rules and verify the environment variables, the deployment connected successfully.
+
+
+4. Include a link to your walk-though video. (It must include your name, show your web service working at Render, explain the way your `Get Single Book` controller works, and discuss status codes.):
+Video link: https://youtu.be/8BpprBm51xg
+
+
+5.a. Include a GitHub link to a file that shows how your app uses sensitive data, such as the MongoDB connection string.
+GitHub link: https://github.com/xandrineshu/cse341-books/blob/main/src/db/connect.js
+
+
+5.b. How did you store sensitive data? Why is that approach important?
+Answer: I stored sensitive data like the MongoDB connection string using environment variables in a local `.env` file and securely configured them in Render's dashboard settings.
+        This approach is critical for security because it prevents hardcoding credentials directly into the source code, keeping sensitive database passwords private and out of public version control repositories.
+
+
+6.a. Include a GitHub link to a file that shows one other implementation decision you made.
+GitHub link: https://github.com/xandrineshu/cse341-books/blob/main/src/router.js
+
+
+6.b. What decision does this file show, and why did you make that choice?
+Answer: This file shows the decision to use an Express Router to separate our API endpoint paths from the main application file. 
+        I chose this approach to follow the Model-View-Controller (MVC) design pattern, which keeps our codebase modular, organized, and much easier to scale as we add more routes in future weeks.
+
+
+7. What is one specific habit or process you will work on for next week?
+Answer: For next week, I want to focus on writing more descriptive and granular commit messages for each individual step of my feature branches to make tracking changes and reviewing pull requests clearer.
+
+
